@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20230410195303",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "coche",
+  "fields": [
+    {
+      "fieldName": "matricula",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "color",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "precio",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "vendido",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Coche",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "venta",
+      "otherEntityRelationshipName": "coches",
+      "relationshipName": "venta",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "marca",
+      "otherEntityRelationshipName": "coche",
+      "relationshipName": "marcas",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

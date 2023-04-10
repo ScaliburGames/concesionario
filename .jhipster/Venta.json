@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20230410195304",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "venta",
+  "fields": [
+    {
+      "fieldName": "fecha",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "tipoPago",
+      "fieldType": "TipoPago",
+      "fieldValues": "TARJETA,EFECTIVO"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Venta",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "vendedor",
+      "otherEntityRelationshipName": "venta",
+      "relationshipName": "vendedores",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "comprador",
+      "otherEntityRelationshipName": "venta",
+      "relationshipName": "compradores",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "coche",
+      "otherEntityRelationshipName": "venta",
+      "relationshipName": "coches",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

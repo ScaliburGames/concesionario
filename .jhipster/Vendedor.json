@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20230410195307",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "vendedor",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellidos",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codigoEmpleado",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dni",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Vendedor",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "venta",
+      "otherEntityRelationshipName": "vendedores",
+      "relationshipName": "venta",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

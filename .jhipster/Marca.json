@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230410195301",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "marca",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Marca",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "coche",
+      "otherEntityRelationshipName": "marcas",
+      "relationshipName": "coche",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "modelo",
+      "otherEntityRelationshipName": "marca",
+      "relationshipName": "modelos",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

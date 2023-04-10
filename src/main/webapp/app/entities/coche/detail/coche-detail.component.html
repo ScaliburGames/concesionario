@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="coche">
+      <h2 data-cy="cocheDetailsHeading"><span>Coche</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span>ID</span></dt>
+        <dd>
+          <span>{{ coche.id }}</span>
+        </dd>
+        <dt><span>Matricula</span></dt>
+        <dd>
+          <span>{{ coche.matricula }}</span>
+        </dd>
+        <dt><span>Color</span></dt>
+        <dd>
+          <span>{{ coche.color }}</span>
+        </dd>
+        <dt><span>Precio</span></dt>
+        <dd>
+          <span>{{ coche.precio }}</span>
+        </dd>
+        <dt><span>Vendido</span></dt>
+        <dd>
+          <span>{{ coche.vendido }}</span>
+        </dd>
+        <dt><span>Venta</span></dt>
+        <dd>
+          <div *ngIf="coche.venta">
+            <a [routerLink]="['/venta', coche.venta?.id, 'view']">{{ coche.venta?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/coche', coche.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

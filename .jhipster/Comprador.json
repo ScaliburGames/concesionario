@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20230410195306",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "comprador",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellidos",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dni",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaNacimiento",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "fechaCarnet",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Comprador",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "venta",
+      "otherEntityRelationshipName": "compradores",
+      "relationshipName": "venta",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
